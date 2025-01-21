@@ -1,10 +1,9 @@
-Group Name   :
-Website Title:
-Group Leader :
-Group Member1:
-Group Member2:
-Group Member3:
-Group Member4:
+Group Name   : NO DIRECTION
+Website Title: MELODY MUSE
+Group Leader : DAVIT MATEVOSYAN
+Group Member1: ARAM DAVTYAN
+Group Member2: ALBERT SOLOYAN
+Group Member3: MOHAMMED AL KARBOLI
 
 ## Instructions:
 - clone this repo

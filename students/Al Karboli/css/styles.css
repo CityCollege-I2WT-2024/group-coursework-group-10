@@ -1,0 +1,90 @@
+/*Mohammed*/
+body {
+    margin: 0;
+    font-family: "Limelight", serif;
+    line-height: 1.6;
+    background-color:  #FFFDD0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #523108;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    color: #FFFDD0;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 5px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+header img {
+    width: 400px;
+    height: auto; 
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.return-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #333;
+    color: #ffc107;
+}

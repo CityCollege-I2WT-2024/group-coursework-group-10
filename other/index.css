@@ -1,0 +1,480 @@
+/*Davit*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b89601;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4c1d95, #6d28d9, #9333ea, #a855f7);
+    color: white;
+    border-bottom: 5px solid #6b4f30;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 10px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 5px 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h2:last-of-type {
+    font-style: italic;
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+.aboutUs {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    padding: 10px 20px;
+    font-family: 'Staatliches', cursive;
+    font-size: 1em;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    z-index: 10; 
+}
+
+.aboutUs:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.slider {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 100px;
+  }
+  
+.slider::after {
+    content: " ";
+    position: absolute;
+    bottom: -20px;
+    height: 15px;
+    width: 100vw;
+}
+  
+.title {
+    font-weight: 800;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+  
+.wrapper {
+    position: relative;
+    display: flex;
+    transition: all 400ms cubic-bezier(0, 0, 0.58, 1);
+    transform-origin: center left;
+    margin: 0 30px;
+}
+  
+.record-wrapper {
+    transition: all 400ms cubic-bezier(0, 0, 0.58, 1);
+    transform: translateX(20px);
+}
+  
+.record-wrapper::after {
+    position: absolute;
+    right: 20px;
+    bottom: 42px;
+    width: 100px;
+    max-height: 0px;
+    z-index: -2;
+    transform: rotate3d(0, 1, 0, 30deg);
+    transform-origin: center center;
+}
+  
+.record-case {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 30px);
+    top: 15px;
+    left: 0;
+    transition: all 400ms cubic-bezier(0, 0, 0.58, 1);
+    animation: caseback 400ms;
+    z-index: 999;
+    border-radius: 2px;
+}
+  
+.record-case .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("..//images/ncs1.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 2px;
+}
+  
+.record-case .image::before {
+    position: absolute;
+    content: " ";
+    top: 70%;
+    left: 3px;
+    bottom: 40px;
+    width: 15%;
+    transform: rotate(-28deg);
+    transform-origin: center bottom;
+    z-index: -1;
+    transition: all 400ms;
+}
+  
+.record-case .image2 {
+    background: url("..//images/rock.jpg");
+    background-size: cover;
+    background-position: left center;
+}
+
+.record-case .image3 {
+    background: url("..//images/jazz.jpg");
+    background-size: cover;
+    background-position: left center;
+}
+
+.record-case .image4 {
+    background: url("..//images/hiphop.jpg");
+    background-size: cover;
+    background-position: left center;
+}
+  
+.record {
+    position: relative;
+    margin: 19px auto;
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, 0.85) 40%) no-repeat 100% 0,
+      linear-gradient(60deg, rgba(42, 41, 40, 0.85) 60%, transparent 60%) no-repeat 0 100%,
+      repeating-radial-gradient(#2a2928, #2a2928 2px, #ada9a0 3px, #2a2928 4px);
+    background-size: 50% 100%, 100% 50%, 100% 100%;
+    transition: all 400ms cubic-bezier(0, 0, 0.58, 1);
+    z-index: 1;
+}
+  
+.record::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-105deg);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: url("..//images/ncs2.jpg");
+    background-size: contain;
+    background-position: bottom bottom;
+    content: "";
+}
+  
+.record2::after {
+    background: url("..//images/rock2.jpg");
+    background-size: contain;
+    background-position: center center;
+}
+
+.record3::after {
+    background: url("..//images/jazz2.jpg");
+    background-size: contain;
+    background-position: center center;
+}
+
+.record4::after {
+    background: url("..//images/hiphop2.jpg");
+    background-size: contain;
+    background-position: center center;
+}
+  
+.wrapper:hover .record {
+    transform: rotate(105deg);
+    transition-delay: 200ms;
+}
+  
+.wrapper:hover {
+    transform: translateZ(50px);
+    margin: 0 70px;
+}
+  
+.wrapper:hover .record-wrapper {
+    transform: translateX(80px);
+    transition-delay: 200ms;
+}
+  
+.wrapper:hover .record-case {
+    animation: case 400ms forwards;
+}
+  
+.wrapper:hover .record-case .image::before {
+    transform: translateX(20px);
+}
+  
+@keyframes case {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    30% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(-20px);
+    }
+}
+  
+@keyframes caseback {
+    0% {
+      transform: translateX(-20px);
+    }
+  
+    70% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+    }
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.li {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 255px;
+    position: absolute;
+    text-align: left;
+    top: 32%;
+    left: 20%;
+    pointer-events: none;
+}
+
+.text p {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#falling-notes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.note {
+    position: absolute;
+    top: -50px; 
+    font-size: 24px;
+    animation: fall 4s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(90vw); 
+        opacity: 0;
+    }
+}
+
+.ncsText {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.8), 
+        0 0 10px rgba(0, 255, 255, 0.8),
+        0 0 15px rgba(0, 255, 255, 0.8),
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 25px rgba(0, 255, 255, 0.8);
+    color: #00ffff; 
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4);
+        color: #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+        color: #00ffd5;
+    }
+}
+
+.rockText {
+    font-family: 'Staatliches', sans-serif; 
+    font-size: 1.4rem; 
+    color: #ff3e00; 
+    text-shadow: 2px 2px 4px #000, 0 0 10px #ff3e00; 
+}
+
+.jazzText {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem; 
+    font-weight: bold; 
+    background: linear-gradient(90deg, #d4af37, #f9d976, #d4af37); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.hiphopText {
+    font-family: 'Impact', sans-serif; 
+    font-size: 2rem; 
+    font-weight: bold;
+    text-shadow: 
+        2px 2px 0 #ff007f, 
+        -2px -2px 0 #00e5ff, 
+        4px 4px 0 #ffea00,
+        -4px -4px 10px rgba(255, 255, 0, 0.5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.textFirst {
+    display: flex;
+    flex-direction: column;
+    gap: 220px;
+    position: absolute;
+    text-align: left;
+    top: 32%;
+    left: 20%;
+    pointer-events: none;
+}
+
+.ncsFirst {
+    font-size: 1.4rem; 
+    line-height: 1.6;
+    font-weight: 600; 
+    text-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.8), 
+        0 0 10px rgba(0, 255, 255, 0.8),
+        0 0 15px rgba(0, 255, 255, 0.8),
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 25px rgba(0, 255, 255, 0.8);
+    color: #00ffff; 
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+.rockFirst {
+    font-family: 'Staatliches', sans-serif; 
+    font-size: 1.4rem; 
+    color: #ff3e00; 
+    text-shadow: 2px 2px 4px #000, 0 0 10px #ff3e00; 
+}
+
+.jazzFirst {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem; 
+    font-weight: bold; 
+    background: linear-gradient(90deg, #4e4e4d, #c5c4c2, #0f0f0f); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.rapFirst {
+    font-family: 'Impact', sans-serif; 
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF007F; 
+    text-transform: uppercase;
+    text-shadow: 
+        2px 2px 0 #000000,  
+        -2px -2px 0 #00E5FF, 
+        4px 4px 0 #FFEA00,   
+        -4px -4px 10px rgba(255, 255, 0, 0.5); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: hiphopGlitch 1.5s infinite ease-in-out; 
+}
+
+@keyframes hiphopGlitch {
+    0% {
+        text-shadow: 
+            2px 2px 0 #000000,
+            -2px -2px 0 #00E5FF,
+            4px 4px 0 #FFEA00,
+            -4px -4px 10px rgba(255, 255, 0, 0.5);
+        transform: translateX(0);
+    }
+    25% {
+        text-shadow: 
+            4px 4px 0 #000000,
+            -4px -4px 0 #FF007F,
+            6px 6px 0 #FFEA00;
+        transform: translateX(-2px);
+    }
+    50% {
+        text-shadow: 
+            2px 2px 0 #00E5FF,
+            -2px -2px 0 #FFEA00,
+            4px 4px 0 #FF007F;
+        transform: translateX(2px);
+    }
+    75% {
+        text-shadow: 
+            6px 6px 0 #FFEA00,
+            -6px -6px 0 #000000,
+            8px 8px 0 #FF007F;
+        transform: translateX(-1px);
+    }
+    100% {
+        text-shadow: 
+            2px 2px 0 #000000,
+            -2px -2px 0 #00E5FF,
+            4px 4px 0 #FFEA00,
+            -4px -4px 10px rgba(255, 255, 0, 0.5);
+        transform: translateX(0);
+    }
+}
+
+

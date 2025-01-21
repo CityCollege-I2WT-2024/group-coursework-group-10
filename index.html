@@ -1,15 +1,168 @@
+<!--Davit-->
 <!DOCTYPE html>
-<!-- Group name:
-     Group members:
--->
-<!-- developed by: -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Coursework</title>
+    <title>Music Genres</title>
+    <link rel="stylesheet" href="./other/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico">
+    <header>
+        <h1>Melody Muse</h1>
+        <h2>Explore the World of Music</h2>
+        <h2>Discover genres that move the soul and ignite the imagination.</h2>
+        <a class="aboutUs" href="./html/aboutus.html">About Us</a>
+    </header>
 </head>
 <body>
-    <p>Add your code here</p>
+    <main>
+        <audio id="electronicSound" src="./other/electronic.mp3" preload="none" loop></audio>
+        <audio id="rockSound" src="./other/rockSound.mp3" preload="none" loop></audio>
+        <audio id="jazzSound" src="./other/jazz.mp3" preload="none" loop></audio>
+        <audio id="hiphopSound" src="./other/hiphop.mp3" preload="none" loop></audio>
+            <nav>
+                <ul class="slider">
+                    <li>
+                        <div class="wrapper">
+                            <a href="./students/Davtyan/home.html" id="electronic">
+                                <div class="record-wrapper">
+                                    <div class='record'></div>
+                                </div>
+                                <div class="record-case">
+                                    <div class="image"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="rockLi">
+                        <div class="wrapper">
+                            <a href="./students/Matevosyan/rock/beatles.html" id="rock">
+                                <div class="record-wrapper">
+                                    <div class='record record2'></div>
+                                </div>
+                                <div class="record-case">
+                                    <div class="image image2"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wrapper">
+                            <a href="./students/Al Karboli/Bud-Powell.html" id="jazz">
+                                <div class="record-wrapper">
+                                    <div class='record record3'></div>
+                                </div>
+                                <div class="record-case">
+                                    <div class="image image3"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="hiphopLi">
+                        <div class="wrapper">
+                            <a href="./students/Soloyan/index.html" id="hiphop">
+                                <div class="record-wrapper">
+                                    <div class='record record4'></div>
+                                </div>
+                                <div class="record-case">
+                                    <div class="image image4"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="textFirst">
+                    <p class="ncsFirst">Enter the future of sound—explore Electronic Music by hovering over the vinyl.</p>
+                    <p class="rockFirst">Let the guitars roar and the drums thunder. Hover to step into the world of rock music.</p>
+                    <p class="jazzFirst">From swing to bebop—hover over the vinyl to explore the essence of jazz.</p>
+                    <p class="rapFirst">Dive into the art of storytelling and rhythm. Hover over the vinyl to explore hip-hop.</p>
+                </div>
+                <div class="text">
+                    <p class="ncsText">Electronic music broadly is a group of music genres that employ electronic musical instruments, circuitry-based music technology and software, or general-purpose electronics such as personal computers in its creation. It includes both music made using electronic and electromechanical music.</p>
+                    <p class="rockText">Rock is a broad genre of popular music that originated as "rock and roll", a style that drew directly from the black musical genres of blues, rhythm and blues, and country music. Rock also drew strongly from genres such as electric blues and folk, and incorporated influences from jazz and other musical styles.</p>
+                    <p class="jazzText">Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries, with its roots in blues, ragtime, European harmony, African rhythmic rituals, spirituals, hymns, marches, vaudeville song, and dance music.</p>
+                    <p class="hiphopText">Hip-hop or hip hop (formerly known as disco rap) is a genre of popular music. The genre is characterized by stylized rhythmic sounds—often built around disco grooves, electronic drum beats, and rapping, a percussive vocal delivery of rhymed poetic speech as consciousness-raising expression.</p>
+                </div>
+            </nav>
+            <div id="falling-notes-container"></div>
+                <script>
+                    document.getElementById("electronic").addEventListener("mouseover", function() { 
+                        document.getElementById("electronicSound").play(); 
+                        document.querySelector(".ncsText").style.opacity = "1";
+                        document.querySelector(".ncsFirst").style.opacity = "0";
+                        document.body.style.backgroundColor = "#0a0a0a"; 
+                        document.body.style.transition = "background-color 0.5s ease"; 
+                    });
+                    document.getElementById("electronic").addEventListener("mouseout", function() { 
+                        document.getElementById("electronicSound").pause(); 
+                        document.getElementById("electronicSound").currentTime = 0; 
+                        document.querySelector(".ncsText").style.opacity = "0";
+                        document.querySelector(".ncsFirst").style.opacity = "1";
+                        document.body.style.backgroundColor = "";
+                    });
+                    
+                    document.getElementById("rock").addEventListener("mouseover", function() { 
+                        document.getElementById("rockSound").play(); 
+                        document.querySelector(".rockText").style.opacity = "1";
+                        document.querySelector(".rockFirst").style.opacity = "0";
+                        document.body.style.background = "linear-gradient(135deg, #ff4500, #ff6e00, #ff8c00, #ff4500)";
+                        document.body.style.transition = "background 0.5s ease"; 
+                    });
+                    document.getElementById("rock").addEventListener("mouseout", function() { 
+                        document.getElementById("rockSound").pause(); 
+                        document.getElementById("rockSound").currentTime = 0; 
+                        document.querySelector(".rockText").style.opacity = "0";
+                        document.querySelector(".rockFirst").style.opacity = "1";
+                        document.body.style.background = "";
+                    });
+    
+                    document.getElementById("jazz").addEventListener("mouseover", function() { 
+                        document.getElementById("jazzSound").play(); 
+                        document.querySelector(".jazzText").style.opacity = "1";
+                        document.querySelector(".jazzFirst").style.opacity = "0";
+                        document.body.style.backgroundColor = "#6b4f30";
+                        document.body.style.transition = "background-color 0.5s ease"; 
+                    });
+                    document.getElementById("jazz").addEventListener("mouseout", function() { 
+                        document.getElementById("jazzSound").pause(); 
+                        document.getElementById("jazzSound").currentTime = 0; 
+                        document.querySelector(".jazzText").style.opacity = "0";
+                        document.querySelector(".jazzFirst").style.opacity = "1";
+                        document.body.style.backgroundColor = "";
+                    });
+    
+                    document.getElementById("hiphop").addEventListener("mouseover", function() { 
+                        document.getElementById("hiphopSound").play(); 
+                        document.querySelector(".hiphopText").style.opacity = "1";
+                        document.querySelector(".rapFirst").style.opacity = "0";
+                        document.body.style.backgroundColor = "#52084e";
+                    });
+                    document.getElementById("hiphop").addEventListener("mouseout", function() { 
+                        document.getElementById("hiphopSound").pause(); 
+                        document.getElementById("hiphopSound").currentTime = 0; 
+                        document.querySelector(".hiphopText").style.opacity = "0";
+                        document.querySelector(".rapFirst").style.opacity = "1";
+                        document.body.style.backgroundColor = "";
+                    });
+
+                    const container = document.getElementById('falling-notes-container');
+                    function generateNote() {
+                        const notes = ['♪', '♫', '♬', '♩', '♭', '♪'];
+                        const note = document.createElement('div');
+                        note.classList.add('note');
+                        note.textContent = notes[Math.floor(Math.random() * notes.length)];
+                        const startPositionX = Math.random() * window.innerWidth;
+                        const delay = Math.random() * 10;
+                        note.style.left = `${startPositionX}px`;
+                        note.style.animationDelay = `${delay}s`;
+                        container.appendChild(note);
+                        note.addEventListener('animationend', () => {
+                            container.removeChild(note);
+                        });
+                    }
+                    setInterval(generateNote, 500);
+                </script>
+            </main>
 </body>
 </html>

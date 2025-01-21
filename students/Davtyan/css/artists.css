@@ -1,0 +1,152 @@
+/*Aram*/
+
+body {
+    font-family: "Orbitron", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+main ul li {
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+main ul li img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: #ff6f61;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+}
+
+main ul li strong {
+    color: #ffffff;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.return {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.return:hover {
+    background-color: #333;
+    color: #ffc107;
+}
+
+header {
+    background: linear-gradient(90deg, #ff6f61, #ff9e80);
+}
+
+
+nav ul {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.return:hover {
+    transform: scale(1.05);
+}
+
+
+main ul li {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+main ul li:hover {
+    transform: translateY(-10px);
+}
+
+
+a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+footer {
+    border-top: 2px solid #ff6f61;
+}
